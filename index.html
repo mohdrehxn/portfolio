@@ -1382,8 +1382,6 @@ function showToast(msg) {
     submitBtn.textContent = 'Sending…';
     submitBtn.disabled = true;
 
-    // Replace setTimeout with your real fetch/API call here
-   
     fetch('contact.php', {
       method: 'POST',
       body: new FormData(form)
@@ -1410,6 +1408,9 @@ function showToast(msg) {
     });
   });
 }());
+```
+
+
 </script>
 </body>
 </html>

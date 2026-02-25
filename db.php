@@ -1,31 +1,31 @@
 <?php
 /**
- * db.php — Database Configuration & Connection
- * Update credentials below to match your hosting.
+ * db.php — Database Configuration
+ * Reads credentials from environment variables (set in Render dashboard)
+ * Falls back to XAMPP defaults for local development
  */
 
-/* ── Your Database Credentials ─────────────────────── */
-$DB_HOST    = 'localhost';
-$DB_NAME    = 'portfolio_db';
-$DB_USER    = 'root';
-$DB_PASS    = '';
+/* ── Credentials from ENV (Render) or fallback (XAMPP) ── */
+$DB_HOST = getenv('DB_HOST') ?: 'localhost';
+$DB_NAME = getenv('DB_NAME') ?: 'portfolio_db';
+$DB_USER = getenv('DB_USER') ?: 'root';
+$DB_PASS = getenv('DB_PASS') ?: '';
 
-/* ── Admin Panel Login ──────────────────────────────── */
-define('ADMIN_USER', 'admin');
-define('ADMIN_PASS', 'Rehankhan1');
+/* ── Admin credentials from ENV or fallback ────────────── */
+define('ADMIN_USER', getenv('ADMIN_USER') ?: 'admin');
+define('ADMIN_PASS', getenv('ADMIN_PASS') ?: 'rehan@2026');
 
-/* ── Site Info ──────────────────────────────────────── */
-define('TO_EMAIL',  'rehanaisha28@gmail.com');
-define('TO_NAME',   'Mohd Rehan');
-define('SITE_NAME', 'Mohd Rehan Portfolio');
+/* ── App config ────────────────────────────────────────── */
+define('TO_EMAIL',   getenv('TO_EMAIL')  ?: 'mohdrehan@email.com');
+define('TO_NAME',    'Mohd Rehan');
+define('SITE_NAME',  'Mohd Rehan Portfolio');
 define('RATE_LIMIT', 60);
 
-/* ── PDO Connection (Singleton) ─────────────────────── */
+/* ── PDO Singleton Connection ──────────────────────────── */
 function getDB(): PDO {
     static $pdo = null;
     if ($pdo !== null) return $pdo;
 
-    // Pull globals into local scope
     $host    = $GLOBALS['DB_HOST'];
     $dbname  = $GLOBALS['DB_NAME'];
     $user    = $GLOBALS['DB_USER'];
@@ -53,7 +53,7 @@ function getDB(): PDO {
     return $pdo;
 }
 
-/* ── Auto-create contacts table if missing ──────────── */
+/* ── Auto-create contacts table if missing ─────────────── */
 function ensureTable(): void {
     $pdo = getDB();
     $pdo->exec("

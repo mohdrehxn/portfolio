@@ -430,7 +430,7 @@ tr:hover td { background:rgba(255,255,255,.02); }
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="sidebar-logo">MR<span>.</span> Admin</div>
+    <div class="sidebar-logo">MR<span>.</span> Rehan</div>
 
     <nav class="sidebar-nav">
       <a href="admin.php" class="nav-item <?= $filter==='all' ? 'active' : '' ?>">

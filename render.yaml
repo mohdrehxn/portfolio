@@ -1,0 +1,49 @@
+# render.yaml — Render Deployment Config
+# Push this file to your GitHub repo root
+# Then connect repo on render.com — it auto-detects this file
+
+services:
+  # ── PHP Web Service ────────────────────────────────
+  - type: web
+    name: mohd-rehan-portfolio
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon           # or: singapore, frankfurt
+    branch: main
+
+    # ── Environment Variables ──────────────────────────
+    # Set these in Render dashboard → Environment tab
+    envVars:
+      - key: DB_HOST
+        value: db            # matches the database service name below
+      - key: DB_NAME
+        value: portfolio_db
+      - key: DB_USER
+        value: portfolio_user
+      - key: DB_PASS
+        generateValue: true  # Render auto-generates a secure password
+      - key: TO_EMAIL
+        value: mohdrehan@email.com   # ← change to your real email
+      - key: ADMIN_USER
+        value: admin
+      - key: ADMIN_PASS
+        generateValue: true  # Render auto-generates secure password
+
+    healthCheckPath: /
+
+  # ── MySQL Database ─────────────────────────────────
+  - type: pserv             # private service (internal only)
+    name: db
+    runtime: docker
+    dockerfilePath: ./mysql.Dockerfile
+    plan: free
+    envVars:
+      - key: MYSQL_DATABASE
+        value: portfolio_db
+      - key: MYSQL_USER
+        value: portfolio_user
+      - key: MYSQL_PASSWORD
+        generateValue: true
+      - key: MYSQL_ROOT_PASSWORD
+        generateValue: true
