@@ -166,8 +166,8 @@ h2 { font-size:clamp(1.9rem,4vw,3rem); margin-bottom:.4rem; }
   line-height:1;
   user-select:none;
 }
-.t-sun  { }
-.t-moon { }
+/* .t-sun  { }
+.t-moon { } */
 
 [data-theme="dark"]  .t-sun  { opacity:1;  transform:scale(1)   rotate(0deg); }
 [data-theme="dark"]  .t-moon { opacity:0;  transform:scale(0)   rotate(90deg); }
@@ -1379,7 +1379,7 @@ function showToast(msg) {
 
     if (!ok) { showToast('⚠️ Please fix the highlighted fields.'); return; }
 
-    submitBtn.textContent = 'Sending…';
+    submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
     fetch('contact.php', {
@@ -1408,7 +1408,7 @@ function showToast(msg) {
     });
   });
 }());
-```
+
 
 
 </script>
