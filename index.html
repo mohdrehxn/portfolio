@@ -1451,7 +1451,6 @@
     </div>
   </header>
 
-  <!-- FIX 1: closeMobile() was called but never defined — now handled by JS -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
     <a href="#about" onclick="closeMobile()">About</a>
     <a href="#work" onclick="closeMobile()">Work</a>
@@ -1581,51 +1580,62 @@
     </div>
 
     <div class="pricing-grid">
+
+      <!-- ── BASIC ── -->
       <div class="price-card reveal delay-1">
         <h3>Basic</h3>
-        <div class="price-amount" data-inr="₹2,999" data-usd="$39">₹2,999</div>
-        <p class="price-desc">Perfect for personal projects &amp; small businesses getting started.</p>
+        <!-- UPDATED: USD $20 (from Fiverr gig), INR adjusted proportionally -->
+        <div class="price-amount" data-inr="₹1,499" data-usd="$20">₹1,999</div>
+        <p class="price-desc">1 page modern responsive website with clean, fast &amp; mobile-friendly design.</p>
         <ul class="feature-list">
-          <li>1–2 Page Website</li>
-          <li>Modern Responsive Design</li>
-          <li>Mobile Friendly</li>
-          <li>Smooth CSS Animations</li>
-          <li>5-Day Delivery</li>
-          <li>1 Revision Round</li>
+          <li>1 Page Website</li>
+          <del><li>Design Customization</li></del>
+         <del><li>Content Upload</li></del>
+          <li>Responsive Design</li>
+          <li>Source Code Included</li>
+          <li>2-Day Delivery</li>
+          <li>2 Revisions</li>
         </ul>
         <a href="https://rzp.io/rzp/XpK5dmN" class="btn btn-ghost btn-full">Get Started</a>
       </div>
 
+      <!-- ── STANDARD ── -->
       <div class="price-card popular reveal delay-2">
         <div class="popular-badge">Most Popular</div>
         <h3>Standard</h3>
-        <div class="price-amount" data-inr="₹6,999" data-usd="$89">₹6,999</div>
-        <p class="price-desc">Best for growing businesses ready to scale online.</p>
+        <!-- UPDATED: USD pricing adjusted, INR unchanged -->
+        <div class="price-amount" data-inr="₹6,999" data-usd="$89">₹4,999</div>
+        <p class="price-desc">Best for growing businesses ready to scale with a professional multi-page online presence.</p>
         <ul class="feature-list">
-          <li>4–6 Pages Website</li>
-          <li>Custom UI / Brand Design</li>
-          <li>SEO Optimised</li>
+          <li>3 Pages Website</li>
+          <li>Design customization</li>
+          <li>Content upload</li>
           <li>Fully Responsive</li>
-          <li>10-Day Delivery</li>
-          <li>3 Revision Rounds</li>
+          <li>Source Code Included</li>
+          <li>4-Day Delivery</li>
+          <li>3 Revisions</li>
         </ul>
         <a href="https://rzp.io/rzp/CtYVnt14" class="btn btn-full">Start Project</a>
       </div>
 
+      <!-- ── PREMIUM ── -->
       <div class="price-card reveal delay-3">
         <h3>Premium</h3>
-        <div class="price-amount" data-inr="₹14,999" data-usd="$189">₹14,999</div>
-        <p class="price-desc">Full-scale web apps with powerful, custom functionality.</p>
+        <div class="price-amount" data-inr="₹14,999" data-usd="$189">₹9,999</div>
+        <p class="price-desc">Full-scale web apps with powerful custom functionality, backend integration &amp; advanced design.</p>
         <ul class="feature-list">
-          <li>Web App / 6–10 Pages</li>
-          <li>Authentication System</li>
-          <li>Custom Animations</li>
+          <li>5 Pages</li>
+          <li>Design customization</li>
+          <li>Content upload</li>
           <li>Backend &amp; Database (Optional)</li>
-          <li>20-Day Delivery</li>
-          <li>Unlimited Revisions</li>
+          <li>Responsive design</li>
+          <li>Source Code Included</li>
+          <li>6-Day Delivery</li>
+          <li>6 Revisions</li>
         </ul>
         <a href="https://rzp.io/rzp/yeaOa7t" class="btn btn-ghost btn-full">Go Premium</a>
       </div>
+
     </div>
   </section>
 
@@ -1637,317 +1647,321 @@
     <p class="sub">Real feedback from real projects. I let the work — and the clients — speak for themselves.</p>
 
     <div class="testimonials-grid">
-                    <div class="info">
-                        <strong>Humzah Khan</strong>
-                        <span>Founder, Chronicals of Hyderabad</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional testimonial cards can be uncommented and added here -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>Great work and very professional. Delivered exactly what I needed on time.</blockquote>
+        <div class="t-author">
+          <div class="t-avatar av-2">HK</div>
+          <div class="info">
+            <strong>Humzah Khan</strong>
+            <span>Founder, Chronicles of Hyderabad</span>
+          </div>
         </div>
-        <!-- FIX 3: .testimonials-grid closing </div> was trapped inside a comment — moved here -->
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ══════════ CONTACT ══════════ -->
-    <section id="contact" class="section reveal" aria-label="Contact">
-        <div class="section-label">Get In Touch</div>
-        <h2>Let's Build Something Amazing</h2>
-        <div class="divider divider-large"></div>
+  <!-- ══════════ CONTACT ══════════ -->
+  <section id="contact" class="section reveal" aria-label="Contact">
+    <div class="section-label">Get In Touch</div>
+    <h2>Let's Build Something Amazing</h2>
+    <div class="divider divider-large"></div>
 
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <p>Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you within 24 hours.</p>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <p>Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you within 24 hours.</p>
 
-                <div class="contact-detail">
-                    <span class="ci">✉️</span>
-                    <a href="#" id="emailLink" title="Email Mohd Rehan" aria-label="Email Mohd Rehan"></a>
-                    <script>
-                        // Email obfuscation
-                        (function() {
-                            var user = 'mohdrehxn';
-                            var domain = 'gmail.com';
-                            var email = user + '@' + domain;
-                            var link = document.getElementById('emailLink');
-                            if (link) {
-                                link.href = 'mailto:' + email;
-                                link.textContent = email;
-                            }
-                        })();
-                    </script>
-                </div>
-
-                <div class="contact-detail">
-                    <span class="ci">📞</span>
-                    <a href="tel:+917893250037">+91 7893250037</a>
-                </div>
-
-                <div class="contact-detail">
-                    <span class="ci">📍</span>
-                    <span>India (Works Globally)</span>
-                </div>
-
-                <div class="contact-detail">
-                    <span class="ci">💼</span>
-                    <a href="https://www.linkedin.com/in/mohdrehxn/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-                </div>
-
-                <div class="response-box">
-                    <strong>⚡ Quick Response</strong>
-                    <span>Usually replies within a few hours during IST business hours.</span>
-                </div>
-            </div>
-
-            <form class="contact-form" id="contactForm" novalidate aria-label="Send a message">
-                <div class="form-group" id="fg-name">
-                    <label for="fname">Your Name</label>
-                    <input type="text" id="fname" name="name" placeholder="John Doe" autocomplete="name">
-                    <span class="form-error">Please enter your full name.</span>
-                </div>
-
-                <div class="form-group" id="fg-email">
-                    <label for="femail">Email Address</label>
-                    <input type="email" id="femail" name="email" placeholder="john@example.com" autocomplete="email">
-                    <span class="form-error">Please enter a valid email address.</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="fbudget">Budget Range</label>
-                    <div class="select-wrap">
-                        <select id="fbudget" name="budget">
-                            <option value="" disabled selected>Select your budget</option>
-                            <option value="basic">₹2,999 – ₹6,999 (Basic)</option>
-                            <option value="standard">₹6,999 – ₹14,999 (Standard)</option>
-                            <option value="premium">₹14,999+ (Premium)</option>
-                            <option value="discuss">Let's discuss</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group" id="fg-message">
-                    <label for="fmessage">Project Details</label>
-                    <textarea id="fmessage" name="message" placeholder="Tell me about your project..."></textarea>
-                    <span class="form-error">Please describe your project briefly.</span>
-                </div>
-
-                <button type="submit" class="btn submit-btn" id="submitBtn">Send Message →</button>
-            </form>
+        <div class="contact-detail">
+          <span class="ci">✉️</span>
+          <a href="#" id="emailLink" title="Email Mohd Rehan" aria-label="Email Mohd Rehan"></a>
+          <script>
+            (function() {
+              var user = 'mohdrehxn';
+              var domain = 'gmail.com';
+              var email = user + '@' + domain;
+              var link = document.getElementById('emailLink');
+              if (link) {
+                link.href = 'mailto:' + email;
+                link.textContent = email;
+              }
+            })();
+          </script>
         </div>
-    </section>
 
-    <!-- ══════════ FOOTER ══════════ -->
-    <footer>
-        <p>© 2026 <strong>Mohd Rehan</strong> · Crafted with ❤️ · <a href="#" aria-label="Back to top">Back to Top ↑</a></p>
-    </footer>
+        <div class="contact-detail">
+          <span class="ci">📞</span>
+          <a href="tel:+917893250037">+91 7893250037</a>
+        </div>
 
-    <!-- ══════════ SCRIPTS ══════════ -->
-    <script>
-        'use strict';
+        <div class="contact-detail">
+          <span class="ci">📍</span>
+          <span>India (Works Globally)</span>
+        </div>
 
-        /* ───────── Profile image fallback ───────── */
-        (function () {
-            var img = document.getElementById('heroImg');
-            var fallback = document.getElementById('avatarFallback');
+        <div class="contact-detail">
+          <span class="ci">💼</span>
+          <a href="https://www.linkedin.com/in/mohdrehxn/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        </div>
 
-            if (!img) return;
+        <div class="contact-detail">
+          <span class="ci">🛒</span>
+          <a href="https://www.fiverr.com/mohdrehan786" target="_blank" rel="noopener noreferrer">Fiverr Profile</a>
+        </div>
 
-            function showFallback() {
-                img.style.display = 'none';
-                fallback.style.display = 'flex';
-            }
+        <div class="response-box">
+          <strong>⚡ Quick Response</strong>
+          <span>Usually replies within a few hours during IST business hours.</span>
+        </div>
+      </div>
 
-            img.addEventListener('error', showFallback);
-            if (img.complete && img.naturalWidth === 0) showFallback();
-        })();
+      <form class="contact-form" id="contactForm" novalidate aria-label="Send a message">
+        <div class="form-group" id="fg-name">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" name="name" placeholder="John Doe" autocomplete="name">
+          <span class="form-error">Please enter your full name.</span>
+        </div>
 
-        /* ───────── Theme toggle ───────── */
-        (function () {
-            var html = document.documentElement;
-            var btn = document.getElementById('themeBtn');
+        <div class="form-group" id="fg-email">
+          <label for="femail">Email Address</label>
+          <input type="email" id="femail" name="email" placeholder="john@example.com" autocomplete="email">
+          <span class="form-error">Please enter a valid email address.</span>
+        </div>
 
-            if (!btn) return;
+        <div class="form-group">
+          <label for="fbudget">Budget Range</label>
+          <div class="select-wrap">
+            <select id="fbudget" name="budget">
+              <option value="" disabled selected>Select your budget</option>
+              <option value="basic">₹1,499 – ₹6,999 / $20–$89 (Basic)</option>
+              <option value="standard">₹6,999 – ₹14,999 / $89–$189 (Standard)</option>
+              <option value="premium">₹14,999+ / $189+ (Premium)</option>
+              <option value="discuss">Let's discuss</option>
+            </select>
+          </div>
+        </div>
 
-            var saved = localStorage.getItem('mr-theme') || 'dark';
-            html.setAttribute('data-theme', saved);
+        <div class="form-group" id="fg-message">
+          <label for="fmessage">Project Details</label>
+          <textarea id="fmessage" name="message" placeholder="Tell me about your project..."></textarea>
+          <span class="form-error">Please describe your project briefly.</span>
+        </div>
 
-            btn.addEventListener('click', function () {
-                var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-                html.setAttribute('data-theme', next);
-                localStorage.setItem('mr-theme', next);
+        <button type="submit" class="btn submit-btn" id="submitBtn">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer>
+    <p>© 2026 <strong>Mohd Rehan</strong> · Crafted with ❤️ · <a href="#" aria-label="Back to top">Back to Top ↑</a></p>
+  </footer>
+
+  <!-- ══════════ SCRIPTS ══════════ -->
+  <script>
+    'use strict';
+
+    /* ───────── Profile image fallback ───────── */
+    (function () {
+      var img = document.getElementById('heroImg');
+      var fallback = document.getElementById('avatarFallback');
+
+      if (!img) return;
+
+      function showFallback() {
+        img.style.display = 'none';
+        fallback.style.display = 'flex';
+      }
+
+      img.addEventListener('error', showFallback);
+      if (img.complete && img.naturalWidth === 0) showFallback();
+    })();
+
+    /* ───────── Theme toggle ───────── */
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('themeBtn');
+
+      if (!btn) return;
+
+      var saved = localStorage.getItem('mr-theme') || 'dark';
+      html.setAttribute('data-theme', saved);
+
+      btn.addEventListener('click', function () {
+        var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('mr-theme', next);
+      });
+    })();
+
+    /* ───────── Hamburger menu ───────── */
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+
+    function closeMobile() {
+      if (!hamburger || !mobileMenu) return;
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function () {
+        var open = hamburger.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', String(open));
+        mobileMenu.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+
+      document.addEventListener('click', function (e) {
+        if (mobileMenu.classList.contains('open') &&
+            !mobileMenu.contains(e.target) &&
+            !hamburger.contains(e.target)) {
+          closeMobile();
+        }
+      });
+    }
+
+    /* ───────── Scroll reveal ───────── */
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      if (!items.length) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      items.forEach(function (el) { observer.observe(el); });
+    })();
+
+    /* ───────── Active nav highlight ───────── */
+    (function () {
+      var sections = document.querySelectorAll('section[id]');
+      var links = document.querySelectorAll('.nav-links a:not(.btn)');
+
+      if (!sections.length || !links.length) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            links.forEach(function (link) {
+              link.classList.toggle(
+                'active',
+                link.getAttribute('href') === '#' + entry.target.id
+              );
             });
-        })();
+          }
+        });
+      }, { threshold: 0.45 });
 
-        /* ───────── Hamburger menu ───────── */
-        var hamburger = document.getElementById('hamburger');
-        var mobileMenu = document.getElementById('mobileMenu');
+      sections.forEach(function (s) { observer.observe(s); });
+    })();
 
-        /* FIX 4: closeMobile was called in onclick attrs but never defined */
-        function closeMobile() {
-            if (!hamburger || !mobileMenu) return;
-            hamburger.classList.remove('open');
-            hamburger.setAttribute('aria-expanded', 'false');
-            mobileMenu.classList.remove('open');
-            document.body.style.overflow = '';
+    /* ───────── Currency toggle ───────── */
+    (function () {
+      var sw = document.getElementById('currencySwitch');
+      var prices = document.querySelectorAll('.price-amount');
+
+      if (!sw || !prices.length) return;
+
+      sw.addEventListener('change', function () {
+        prices.forEach(function (el) {
+          el.textContent = sw.checked ? el.dataset.usd : el.dataset.inr;
+        });
+      });
+    })();
+
+    /* ───────── Toast helper ───────── */
+    var toastEl = document.getElementById('toast');
+    var toastTimer = null;
+
+    function showToast(msg) {
+      if (!toastEl) return;
+      clearTimeout(toastTimer);
+      toastEl.textContent = msg;
+      toastEl.classList.add('show');
+      toastTimer = setTimeout(function () {
+        toastEl.classList.remove('show');
+      }, 3500);
+    }
+
+    /* ───────── Contact form ───────── */
+    (function () {
+      var form = document.getElementById('contactForm');
+      var submitBtn = document.getElementById('submitBtn');
+
+      if (!form || !submitBtn) return;
+
+      var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      function setErr(id, show) {
+        var el = document.getElementById(id);
+        if (el) el.classList.toggle('has-error', show);
+      }
+
+      var fnameEl    = document.getElementById('fname');
+      var femailEl   = document.getElementById('femail');
+      var fmessageEl = document.getElementById('fmessage');
+      var fbudgetEl  = document.getElementById('fbudget');
+
+      [['fname', 'fg-name'], ['femail', 'fg-email'], ['fmessage', 'fg-message']]
+        .forEach(function (p) {
+          var input = document.getElementById(p[0]);
+          if (input) {
+            input.addEventListener('input', function () {
+              setErr(p[1], false);
+            });
+          }
+        });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var name    = fnameEl    ? fnameEl.value.trim()    : '';
+        var email   = femailEl   ? femailEl.value.trim()   : '';
+        var message = fmessageEl ? fmessageEl.value.trim() : '';
+        var budget  = fbudgetEl  ? fbudgetEl.value         : '';
+
+        var ok = true;
+
+        if (!name)                           { setErr('fg-name',    true); ok = false; }
+        if (!email || !EMAIL_RE.test(email)) { setErr('fg-email',   true); ok = false; }
+        if (!message)                        { setErr('fg-message', true); ok = false; }
+
+        if (!ok) {
+          showToast('⚠️ Please fix the highlighted fields.');
+          return;
         }
 
-        if (hamburger && mobileMenu) {
-            hamburger.addEventListener('click', function () {
-                var open = hamburger.classList.toggle('open');
-                hamburger.setAttribute('aria-expanded', String(open));
-                mobileMenu.classList.toggle('open', open);
-                document.body.style.overflow = open ? 'hidden' : '';
-            });
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
 
-            document.addEventListener('click', function (e) {
-                if (mobileMenu.classList.contains('open') &&
-                    !mobileMenu.contains(e.target) &&
-                    !hamburger.contains(e.target)) {
-                    closeMobile();
-                }
-            });
-        }
-
-        /* ───────── Scroll reveal ───────── */
-        (function () {
-            var items = document.querySelectorAll('.reveal');
-            if (!items.length) return;
-
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            items.forEach(function (el) { observer.observe(el); });
-        })();
-
-        /* ───────── Active nav highlight ───────── */
-        (function () {
-            var sections = document.querySelectorAll('section[id]');
-            var links = document.querySelectorAll('.nav-links a:not(.btn)');
-
-            if (!sections.length || !links.length) return;
-
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        links.forEach(function (link) {
-                            link.classList.toggle(
-                                'active',
-                                link.getAttribute('href') === '#' + entry.target.id
-                            );
-                        });
-                    }
-                });
-            }, { threshold: 0.45 });
-
-            sections.forEach(function (s) { observer.observe(s); });
-        })();
-
-        /* ───────── Currency toggle ───────── */
-        (function () {
-            var sw = document.getElementById('currencySwitch');
-            var prices = document.querySelectorAll('.price-amount');
-
-            if (!sw || !prices.length) return;
-
-            sw.addEventListener('change', function () {
-                prices.forEach(function (el) {
-                    el.textContent = sw.checked ? el.dataset.usd : el.dataset.inr;
-                });
-            });
-        })();
-
-        /* ───────── Toast helper ───────── */
-        var toastEl = document.getElementById('toast');
-        var toastTimer = null;
-
-        function showToast(msg) {
-            if (!toastEl) return;
-            clearTimeout(toastTimer);
-            toastEl.textContent = msg;
-            toastEl.classList.add('show');
-            toastTimer = setTimeout(function () {
-                toastEl.classList.remove('show');
-            }, 3500);
-        }
-
-        /* ───────── Contact form ───────── */
-        (function () {
-            var form = document.getElementById('contactForm');
-            var submitBtn = document.getElementById('submitBtn');
-
-            if (!form || !submitBtn) return;
-
-            var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            function setErr(id, show) {
-                var el = document.getElementById(id);
-                if (el) el.classList.toggle('has-error', show);
-            }
-
-            /* FIX 5: use getElementById instead of bare global ID references */
-            var fnameEl   = document.getElementById('fname');
-            var femailEl  = document.getElementById('femail');
-            var fmessageEl = document.getElementById('fmessage');
-            var fbudgetEl = document.getElementById('fbudget');
-
-            [['fname', 'fg-name'], ['femail', 'fg-email'], ['fmessage', 'fg-message']]
-                .forEach(function (p) {
-                    var input = document.getElementById(p[0]);
-                    if (input) {
-                        input.addEventListener('input', function () {
-                            setErr(p[1], false);
-                        });
-                    }
-                });
-
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                var name    = fnameEl   ? fnameEl.value.trim()    : '';
-                var email   = femailEl  ? femailEl.value.trim()   : '';
-                var message = fmessageEl ? fmessageEl.value.trim() : '';
-                var budget  = fbudgetEl ? fbudgetEl.value         : '';
-
-                var ok = true;
-
-                if (!name)                        { setErr('fg-name',    true); ok = false; }
-                if (!email || !EMAIL_RE.test(email)) { setErr('fg-email', true); ok = false; }
-                if (!message)                     { setErr('fg-message', true); ok = false; }
-
-                if (!ok) {
-                    showToast('⚠️ Please fix the highlighted fields.');
-                    return;
-                }
-
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-
-                fetch('default.aspx/SendMessage', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name: name, email: email, message: message, budget: budget })
-                })
-                .then(function (r) { return r.json(); })
-                .then(function (d) {
-                    if (d.d && d.d.success) {
-                        showToast('✅ Message sent successfully!');
-                        form.reset();
-                    } else {
-                        showToast('⚠️ ' + (d.d && d.d.message ? d.d.message : 'Something went wrong.'));
-                    }
-                })
-                .catch(function () { showToast('❌ Server error. Try again later.'); })
-                .finally(function () {
-                    submitBtn.textContent = 'Send Message →';
-                    submitBtn.disabled = false;
-                });
-            });
-        })();
-    </script>
+        fetch('default.aspx/SendMessage', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, email: email, message: message, budget: budget })
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d.d && d.d.success) {
+            showToast('✅ Message sent successfully!');
+            form.reset();
+          } else {
+            showToast('⚠️ ' + (d.d && d.d.message ? d.d.message : 'Something went wrong.'));
+          }
+        })
+        .catch(function () { showToast('❌ Server error. Try again later.'); })
+        .finally(function () {
+          submitBtn.textContent = 'Send Message →';
+          submitBtn.disabled = false;
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
