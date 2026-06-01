@@ -2145,24 +2145,24 @@
             ok = false;
           }
 
-          // if (!ok) {
-          //   showToast("⚠️ Please fix the highlighted fields.");
-          //   return;
-          // }
+          if (!ok) {
+            showToast("⚠️ Please fix the highlighted fields.");
+            return;
+          }
 
-          // submitBtn.textContent = "Sending...";
-          // submitBtn.disabled = true;
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
 
-          // fetch("default.aspx/SendMessage", {
-          //   method: "POST",
-          //   headers: { "Content-Type": "application/json" },
-          //   body: JSON.stringify({
-          //     name: name,
-          //     email: email,
-          //     message: message,
-          //     budget: budget,
-          //   }),
-          // })
+          fetch("default.aspx/SendMessage", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              message: message,
+              budget: budget,
+            }),
+          })
             .then(function (r) {
               return r.json();
             })
