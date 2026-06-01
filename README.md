@@ -23,8 +23,6 @@
 
 ## 📸 Preview
 
-> *(Add a screenshot — drag an image into the repo and reference it below)*
->
 > ![Portfolio Preview](images/preview.png)
 
 ---
