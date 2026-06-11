@@ -4,6 +4,14 @@
     "request": "launch",
     "name": "Launch Chrome",
     "url": "http://127.0.0.1:3000/index.html",
-    "webRoot": "${workspaceFolder}"
+    "webRoot": "${workspaceFolder}",
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/index.html"
+        }
+    ]
 
 }
