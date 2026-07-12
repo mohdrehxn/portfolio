@@ -25,7 +25,7 @@ The entire portfolio is self-contained in a single `index.html` file (2,369 line
 ## 🛠️ Technologies
 
 | Layer | Technology |
-|---|---|
+| --- | --- |
 | **Markup** | HTML5 (semantic structure) |
 | **Styling** | CSS3 — Custom Properties, Flexbox, CSS Grid, Glassmorphism, Backdrop Filter |
 | **Scripting** | Vanilla JavaScript (ES6+) |
