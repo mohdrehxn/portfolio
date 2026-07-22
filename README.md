@@ -1,167 +1,131 @@
-<div align="center">
+# Mohd Tadveed Rehan | Portfolio
 
-# 🚀 Mohd Tadveed Rehan — Portfolio
+A premium, single-page developer portfolio built with pure HTML, CSS, and vanilla JavaScript — featuring a dark, futuristic aesthetic with glassmorphism, animated gradients, and smooth scroll-based interactions.
 
-**A premium, single-file personal portfolio website with a modern dark aesthetic, smooth animations, and full light/dark mode support.**
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://portfolio-gamma-brown-76.vercel.app)
-[![Repo](https://img.shields.io/badge/GitHub-mohdrehxn%2Fportfolio-181717?style=for-the-badge&logo=github)](https://github.com/mohdrehxn/portfolio)
-[![HTML](https://img.shields.io/badge/Built%20With-HTML%20100%25-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/mohdrehxn/portfolio)
-
-</div>
+**Live Demo:** [portfolio-gamma-brown-76.vercel.app](https://portfolio-gamma-brown-76.vercel.app)
 
 ---
 
-## 📖 Introduction
+## Introduction
 
-This is the personal developer portfolio of **Mohd Tadveed Rehan** — a Frontend Developer and BCA student based in Hyderabad, India. The site showcases skills, featured projects, certifications, services, and contact information in a visually rich, single-page experience.
+This is my personal portfolio website, designed to showcase my skills, projects, education, and services as a Frontend Developer and BCA student. The site is built entirely with native web technologies — no frameworks, no build tools — to keep it lightweight, fast, and fully self-contained in a single HTML file.
 
-The entire portfolio is self-contained in a single `index.html` file (2,369 lines / 82 KB) — no build tools, no frameworks, no bundlers. Just clean, well-structured HTML, CSS, and vanilla JavaScript, deployed on Vercel.
-
-> **"Building responsive modern digital experiences."**
+The design leans into a dark, cyberpunk-inspired visual language with glass-panel cards, neon accent gradients, particle backgrounds, and micro-interactions throughout, while remaining fully responsive and accessible.
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
-| Layer | Technology |
-| --- | --- |
-| **Markup** | HTML5 (semantic structure) |
-| **Styling** | CSS3 — Custom Properties, Flexbox, CSS Grid, Glassmorphism, Backdrop Filter |
-| **Scripting** | Vanilla JavaScript (ES6+) |
-| **Fonts** | [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (headings) · [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (body) via Google Fonts |
-| **Icons** | [Font Awesome 6.4.0](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css) via CDN |
-| **Animation** | CSS keyframes + JS-driven canvas particle system |
-| **Deployment** | [Vercel](https://vercel.com) |
-
-No npm, no webpack, no React — purely hand-crafted front-end.
+- **HTML5** — Semantic markup structure
+- **CSS3** — Custom properties (CSS variables), Grid, Flexbox, keyframe animations, backdrop-filter (glassmorphism)
+- **Vanilla JavaScript (ES6+)** — No dependencies; native `IntersectionObserver`, `Canvas API`, `localStorage`, `matchMedia`
+- **Font Awesome 6** — Icon library (via CDN)
+- **Google Fonts** — Space Grotesk (headings) & Plus Jakarta Sans (body)
 
 ---
 
-## ✨ Features
+## Features
 
-- **Dark / Light Theme Toggle** — Smooth CSS variable swap with persistent preference, powered by `[data-theme]` attribute
-- **Particle Canvas Background** — Animated particle system rendered on an HTML5 `<canvas>` in the hero section
-- **Custom Cursor** — Styled cursor ring + dot that reacts to hover states
-- **Scroll Progress Bar** — Fixed top bar that fills as the user scrolls down the page
-- **Typing Animation** — Rotating role titles with a blinking caret effect in the hero
-- **Glassmorphism UI** — Frosted-glass cards with `backdrop-filter: blur()` throughout
-- **Animated Skill Bars** — Progress fills triggered by Intersection Observer when sections enter the viewport
-- **Project Filter System** — Category-based JavaScript filtering for the projects grid (Frontend, Backend, AI, etc.)
-- **Education Timeline** — Vertical timeline with glowing accent dots
-- **Liquid Blob Illustration** — CSS `border-radius` morphing animation on the hero image container
-- **Stats Counter** — Animated number counters for experience stats
-- **Responsive Navigation** — Hamburger menu for mobile with animated bar-to-X transition
-- **Fully Responsive** — Fluid grid layouts that reflow from desktop to mobile
-- **Reduced Motion Support** — Respects `prefers-reduced-motion` media query
+- 🌗 **Dark/Light Theme Toggle** — Persisted via `localStorage`, respects system preference on first load
+- ✨ **Animated Particle Canvas** — Lightweight, performance-capped particle system in the hero background
+- ⌨️ **Typewriter Effect** — Cycles through role titles in the hero subtitle
+- 📊 **Animated Skill Bars & Stat Counters** — Triggered on scroll via `IntersectionObserver`
+- 🗂️ **Filterable Projects Grid** — Filter by Frontend / Backend / AI category with smooth transitions
+- 💡 **Spotlight Hover Effect** — Mouse-tracked radial glow on project cards
+- 📱 **Fully Responsive** — Optimized breakpoints for tablet and mobile, including a slide-in mobile nav menu
+- 📈 **Scroll Progress Bar & Back-to-Top Button**
+- ✅ **Client-Side Form Validation** — Accessible error states with live feedback
+- ♿ **Reduced Motion Support** — Disables non-essential animations when `prefers-reduced-motion` is set
+- 🧊 **Glassmorphism UI** — Consistent frosted-glass card system across all sections
 
 ---
 
-## 🔧 Process
+## Process
 
-The portfolio was built with a **code-first, design-in-browser** approach — no external design tool handoff.
-
-1. **Design System First** — CSS custom properties (`--accent-primary`, `--bg-primary`, `--glass-bg`, etc.) were defined upfront as a single source of truth for both dark and light themes.
-2. **Section-by-Section Build** — Each section (Hero → About → Skills → Projects → Certifications → Services → Contact) was built and styled independently using modular CSS blocks, clearly delineated by comments.
-3. **Animation Layer** — JS-driven effects (particle canvas, scroll progress, typed text, counters, skill bar fills) were layered in after the static layout was solid, using `IntersectionObserver` to keep performance clean.
-4. **Theme Engine** — Light mode was implemented as a CSS variable override on `[data-theme="light"]`, requiring zero duplicate code.
-5. **Responsive Pass** — Media queries were applied globally after each major section to ensure consistent reflow down to mobile widths.
-6. **Deployment** — The repo was connected directly to Vercel for zero-config continuous deployment on every push to `main`.
+1. **Structure first** — Built out semantic HTML for each section (Hero, About, Skills, Education, Projects, Certifications, Services, Contact) before any styling.
+2. **Design system via CSS variables** — Established a token-based color/spacing/typography system in `:root`, enabling instant theme switching by overriding tokens under `[data-theme="light"]`.
+3. **Component styling** — Built reusable classes (`.glass-card`, `.btn`, `.section-padding`) to keep styling DRY across sections.
+4. **Progressive JavaScript enhancement** — Layered in interactivity module by module (theme engine, navigation, particles, typing effect, scroll engine, filtering, form validation) via small, single-responsibility functions initialized on `DOMContentLoaded`.
+5. **Performance passes** — Throttled scroll handlers with `requestAnimationFrame`, capped particle count, and used `IntersectionObserver` instead of scroll-position polling for reveal animations.
+6. **Responsive refinement** — Tested and adjusted breakpoints at 992px and 768px for tablet/mobile layouts.
+7. **Accessibility & motion safety** — Added `prefers-reduced-motion` handling and focus-visible states throughout.
 
 ---
 
-## ▶️ Running the Project
+## Running the Project
 
-No installation or build step is required.
+No build step or dependencies required — it's a static site.
 
-### Option 1 — Open Directly (Simplest)
-
+**Option 1: Open directly**
 ```bash
-# Clone the repository
+# Clone the repo
 git clone https://github.com/mohdrehxn/portfolio.git
-
-# Navigate into the folder
 cd portfolio
 
-# Open in your browser
-open index.html        # macOS
-start index.html       # Windows
-xdg-open index.html    # Linux
+# Open index.html in your browser
+open index.html   # macOS
+start index.html  # Windows
 ```
 
-### Option 2 — Live Server (Recommended for Development)
-
-If you use **VS Code**, install the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), then right-click `index.html` → **Open with Live Server**.
-
-Or use any static server via Node.js:
-
+**Option 2: Local server (recommended for full functionality)**
 ```bash
+# Using Python
+python3 -m http.server 5500
+
+# Using Node (with the 'serve' package)
 npx serve .
-# → Serving at http://localhost:3000
 ```
+Then visit `http://localhost:5500` in your browser.
 
-### Option 3 — View Live
-
-The site is deployed and live at:
-
-```
-https://portfolio-gamma-brown-76.vercel.app
-```
-
-No login, no setup — just open and explore.
+**Deployment**
+The site is deployed on [Vercel](https://vercel.com) — simply connect the GitHub repo and deploy with zero configuration, since it's a static HTML project.
 
 ---
 
-## 🖼️ Preview
+## Preview
 
 | Section | Description |
 |---|---|
-| **Hero** | Full-viewport intro with particle canvas, typing animation, and liquid blob profile image |
-| **About** | Two-column layout with bio text and animated stat counters |
-| **Skills** | Categorised skill cards with animated progress bars |
-| **Projects** | Filterable project grid with tech tags and live/GitHub links |
-| **Education** | Vertical timeline with glowing accent markers |
-| **Certifications** | Icon-led certification cards in a responsive two-column grid |
-| **Services** | Centred service cards with hover lift effect |
-| **Contact** | Split layout with contact info panel and an interactive form |
+| **Hero** | Animated intro with typewriter role text, particle canvas, and social links |
+| **About** | Bio card alongside animated stat counters |
+| **Skills** | Categorized skill bars (Frontend, Backend, Tools, Architecture) |
+| **Education** | Timeline layout for academic background |
+| **Projects** | Filterable grid with live demo & GitHub links |
+| **Certifications** | Cards highlighting completed certifications |
+| **Services** | Grid of offered services |
+| **Contact** | Contact info panel + validated contact form |
 
-> **Live Preview →** [portfolio-gamma-brown-76.vercel.app](https://portfolio-gamma-brown-76.vercel.app)
-
-### Color Palette
-
-| Token | Dark Mode | Light Mode |
-|---|---|---|
-| Background Primary | `#060b12` | `#f4f6fb` |
-| Accent Primary | `#ff6b4a` | `#e8512a` |
-| Surface | `#0f1a27` | `#ffffff` |
-| Text Primary | `#f5f7fb` | `#0f1a27` |
+*(Add screenshots or a GIF walkthrough here once available.)*
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio/
-├── index.html          # Entire site — markup, styles, and scripts in one file
+├── index.html          # Main HTML file (structure, embedded CSS, embedded JS)
 ├── assets/
-│   └── images/
-│       └── profile.png # Hero profile image
-├── .vscode/            # VS Code workspace settings
-├── .hintrc             # webhint configuration
-└── TODO.md             # Development notes and planned improvements
+│   ├── images/
+│   │   ├── profile.png     # Hero profile image
+│   │   └── preview.png     # Open Graph / social share preview image
+│   └── Mohd Rehan Resume.pdf   # Downloadable resume
+└── README.md            # Project documentation
 ```
 
+> **Note:** All CSS and JavaScript are currently embedded within `index.html` in `<style>` and `<script>` tags to keep the project dependency-free and easy to deploy as a single file.
+
 ---
 
-## 📬 Contact
+## Contact
 
-**Mohd Tadveed Rehan**  
+**Mohd Tadveed Rehan**
 Frontend Developer · BCA Student · Hyderabad, India
 
-[![GitHub](https://img.shields.io/badge/GitHub-mohdrehxn-181717?style=flat-square&logo=github)](https://github.com/mohdrehxn)
+- 📧 Email: [rehanaisha28@gmail.com](mailto:rehanaisha28@gmail.com)
+- 💻 GitHub: [github.com/mohdrehxn](https://github.com/mohdrehxn)
+- 🔗 LinkedIn: [linkedin.com/in/mohdrehxn](https://linkedin.com/in/mohdrehxn)
+- 🌐 Portfolio: [portfolio-gamma-brown-76.vercel.app](https://portfolio-gamma-brown-76.vercel.app)
 
 ---
 
-<div align="center">
-  Made with ❤️ and pure HTML · CSS · JS
-</div>
+<p align="center">© 2026 Mohd Tadveed Rehan. All Rights Reserved.</p>
