@@ -35,8 +35,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <script defer src="main.py"></script>
-
   <!-- Early theme init script to prevent layout flashes -->
 
   <!-- Main Stylesheet -->
@@ -1823,7 +1821,7 @@
           <h1 class="hero-title">Mohd Tadveed Rehan</h1>
           <h2 class="hero-subtitle">
             I'm a
-            <span class="typing-text" data-words='["Web Developer","Web Designer","BCA Student"]'></span>
+            <span class="typing-text" data-words="[&quot;Web Developer&quot;,&quot;Web Designer&quot;,&quot;BCA Student&quot;]"></span>
           </h2>
           <p class="hero-tagline">
             Building Responsive Websites & Modern Digital Experiences.
@@ -1831,7 +1829,7 @@
 
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="assets/Mohd Rehan Resume.docx" class="btn btn-secondary">Download Resume</a>
+            <a href="assets/Mohd%20Rehan%20Resume.docx" class="btn btn-secondary">Download Resume</a>
           </div>
 
           <div class="hero-socials">
@@ -2294,27 +2292,27 @@
           </div>
 
           <div class="contact-form-wrapper glass-card">
-            <form action='https://api.web3forms.com/submit' id='portfolio-contact-form' method='POST'
-              novalidate='novalidate'>
-              <input name='access_key' type='hidden' value='1d4e2475-7e8d-49d3-89dd-5b87cad3fa46' />
+            <form action="https://api.web3forms.com/submit" id="portfolio-contact-form" method="POST"
+              novalidate="novalidate">
+              <input name="access_key" type="hidden" value="1d4e2475-7e8d-49d3-89dd-5b87cad3fa46" />
               <div class="form-group">
                 <label for="form-name">Full Name</label>
-                <input type="text" id="form-name" required placeholder="John Doe" />
+                <input type="text" id="form-name" name="name" required placeholder="John Doe" />
                 <span class="error-msg">Please enter your name (at least 2 characters).</span>
               </div>
               <div class="form-group">
                 <label for="form-email">Email Address</label>
-                <input type="email" id="form-email" required placeholder="john@example.com" />
+                <input type="email" id="form-email" name="email" required placeholder="john@example.com" />
                 <span class="error-msg">Please enter a valid email address.</span>
               </div>
               <div class="form-group">
                 <label for="form-subject">Subject</label>
-                <input type="text" id="form-subject" required placeholder="Project Alliance Opportunity" />
+                <input type="text" id="form-subject" name="subject" required placeholder="Project Alliance Opportunity" />
                 <span class="error-msg">Please enter a subject (at least 3 characters).</span>
               </div>
               <div class="form-group">
                 <label for="form-message">Message Details</label>
-                <textarea id="form-message" rows="5" required placeholder="Elaborate project parameters..."></textarea>
+                <textarea id="form-message" name="message" rows="5" required placeholder="Elaborate project parameters..."></textarea>
                 <span class="error-msg">Please write a message (at least 10 characters).</span>
               </div>
               <button type="submit" class="btn btn-primary btn-block">
@@ -2522,9 +2520,6 @@
           closeMenu();
         }
       });
-
-      // Close menu on scroll
-      window.addEventListener("scroll", closeMenu, { passive: true });
     }
 
     /* ==========================================================================
@@ -2940,7 +2935,7 @@
       const form = document.getElementById("portfolio-contact-form");
       if (!form) return;
 
-      form.addEventListener("submit", (e) => {
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
         let integrityPassed = true;
 
@@ -2995,14 +2990,33 @@
           if (btnTextElement) btnTextElement.textContent = "Sending...";
           if (btnIcon) btnIcon.className = "fas fa-spinner fa-spin";
 
-          // Mock async endpoint submission delay
-          setTimeout(() => {
-            if (btnTextElement) btnTextElement.textContent = "Message Sent!";
-            if (btnIcon) btnIcon.className = "fas fa-check-circle";
-            submitBtn.style.backgroundColor = "#22c55e";
-            submitBtn.style.borderColor = "#22c55e";
-            form.reset();
+          try {
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: formData,
+            });
 
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+              if (btnTextElement) btnTextElement.textContent = "Message Sent!";
+              if (btnIcon) btnIcon.className = "fas fa-check-circle";
+              submitBtn.style.backgroundColor = "#22c55e";
+              submitBtn.style.borderColor = "#22c55e";
+              form.reset();
+            } else {
+              if (btnTextElement) btnTextElement.textContent = "Error Sending!";
+              if (btnIcon) btnIcon.className = "fas fa-exclamation-circle";
+              submitBtn.style.backgroundColor = "#ef4444";
+              submitBtn.style.borderColor = "#ef4444";
+            }
+          } catch (err) {
+            if (btnTextElement) btnTextElement.textContent = "Submission Failed!";
+            if (btnIcon) btnIcon.className = "fas fa-exclamation-circle";
+            submitBtn.style.backgroundColor = "#ef4444";
+            submitBtn.style.borderColor = "#ef4444";
+          } finally {
             setTimeout(() => {
               submitBtn.disabled = false;
               if (btnTextElement) btnTextElement.textContent = originalText;
@@ -3010,7 +3024,7 @@
               submitBtn.style.backgroundColor = "";
               submitBtn.style.borderColor = "";
             }, 4000);
-          }, 1500);
+          }
         }
       });
 
